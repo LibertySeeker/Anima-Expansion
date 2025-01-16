@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Name="EF_TribalBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>FactionBase_Elders</defaultFactionType>
+    <maxGenerationAge>60</maxGenerationAge>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <invNutrition>2.55</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="EF_TribalBase">
+    <defName>Elders_Warrior</defName>
+    <label>warrior</label>
+    <combatPower>60</combatPower>
+    <itemQuality>Poor</itemQuality>
+    <canBeSapper>true</canBeSapper>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>200~300</apparelMoney>
+    <apparelRequired>
+      <li>Apparel_AnimaWarVeil</li>
+	  <li>Apparel_AnimaTribal</li>
+    </apparelRequired>
+    <apparelTags>
+      <li>AnimaTribal</li>
+	  <li>AnimaVeil</li>
+    </apparelTags>
+    <weaponMoney>150~300</weaponMoney>
+	<defaultFactionType>FactionBase_Elders</defaultFactionType>
+    <weaponTags>
+      <li>NeolithicMeleeDecent</li>
+    </weaponTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>15~24</initialResistanceRange>
+  </PawnKindDef>
+  
+    <PawnKindDef ParentName="EF_TribalBase">
+    <defName>Elders_Trader</defName>
+    <label>trader</label>
+	<trader>true</trader>
+    <combatPower>60</combatPower>
+    <itemQuality>Poor</itemQuality>
+    <canBeSapper>false</canBeSapper>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>200~300</apparelMoney>
+    <apparelRequired>
+	  <li>Apparel_AnimaTribal</li>
+    </apparelRequired>
+	<apparelTags>
+      <li>AnimaTribal</li>
+    </apparelTags>
+    <weaponMoney>150~250</weaponMoney>
+	<defaultFactionType>FactionBase_Elders</defaultFactionType>
+    <weaponTags>
+      <li>NeolithicMeleeDecent</li>
+    </weaponTags>
+    <initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>8~12</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="EF_TribalBase" >
+    <defName>Elders_MightyWarrior</defName>
+    <label>mighty warrior</label>
+    <combatPower>100</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <apparelMoney>200~500</apparelMoney>
+    <apparelRequired>
+      <li>Apparel_AnimaWarMask</li>
+	  <li>Apparel_AnimaTribal</li>
+    </apparelRequired>
+    <apparelTags>
+      <li>AnimaTribal</li>
+	  <li>AnimaMask</li>
+    </apparelTags>
+    <weaponMoney>200~500</weaponMoney>
+	<defaultFactionType>FactionBase_Elders</defaultFactionType>
+	<weaponTags>
+      <li>NeolithicMeleeAdvanced</li>
+      <li>MedievalMeleeAdvanced</li>
+    </weaponTags>
+    <initialWillRange>2~3</initialWillRange>
+    <initialResistanceRange>17~26</initialResistanceRange>
+  </PawnKindDef>
+  
+    <PawnKindDef ParentName="EF_TribalBase" >
+    <defName>Elders_Psycaster</defName>
+	<label>psycaster</label>
+    <combatPower>150</combatPower>
+    <minGenerationAge>30</minGenerationAge>
+    <maxGenerationAge>999</maxGenerationAge>
+    <itemQuality>Normal</itemQuality>
+    <canBeSapper>true</canBeSapper>
+    <apparelMoney>450~750</apparelMoney>
+    <apparelRequired>
+      <li>Apparel_AnimaWarMask</li>
+      <li>Apparel_PlateArmor</li>
+	  <li>Apparel_AnimaTribal</li>
+    </apparelRequired>
+	<apparelTags>
+      <li>AnimaMask</li>
+	  <li>AnimaTribal</li>
+    </apparelTags>
+	<weaponTags>
+      <li>AnimaStaff</li>
+    </weaponTags>
+    <weaponMoney>1500~10000</weaponMoney>
+	<defaultFactionType>FactionBase_Elders</defaultFactionType>
+    <initialWillRange>3~5</initialWillRange>
+    <initialResistanceRange>26~35</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="EF_TribalBase">
+    <defName>Elders_AncientChief</defName>
+	<label>ancient chief</label>
+    <combatPower>200</combatPower>
+    <minGenerationAge>30</minGenerationAge>
+    <maxGenerationAge>999</maxGenerationAge>
+    <itemQuality>Normal</itemQuality>
+    <factionLeader>true</factionLeader>
+    <canBeSapper>true</canBeSapper>
+    <apparelMoney>450~750</apparelMoney>
+    <apparelRequired>
+      <li>Apparel_AnimaCrown</li>
+      <li>Apparel_PlateArmor</li>
+	  <li>Apparel_AnimaTribal</li>
+    </apparelRequired>
+	<apparelTags>
+	  <li>AnimaTribal</li>
+	  <li>AnimaCrown</li>
+    </apparelTags>
+	<weaponTags>
+      <li>AnimaStaff</li>
+    </weaponTags>
+    <weaponMoney>1500~20000</weaponMoney>
+	<defaultFactionType>FactionBase_Elders</defaultFactionType>
+    <initialWillRange>10~20</initialWillRange>
+    <initialResistanceRange>25~45</initialResistanceRange>
+  </PawnKindDef>
+  
+</Defs>

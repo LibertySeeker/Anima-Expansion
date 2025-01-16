@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>AnimaJadePill</defName>
+		<label>anima jade pill</label>
+		<description>A round pill refined from concentrated anima fiber extract. This pill contains instant digestible psychic energy which replenishes a portion of depleted psychic focus as well as provides mental relaxation to help dissipate neural heat and hightens psychic sensisitivity. Stabilized with crushed jade. Very useful for psycasters.</description>
+		<descriptionHyperlinks>
+			<HediffDef>AnimaJadePillBoost</HediffDef>
+			<ThingDef>AnimaFiber</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>AnimaJadePill</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>700</WorkToMake>
+			<MarketValue>80</MarketValue>
+			<Mass>0.01</Mass>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<tradeTags>
+			<li>AnimaDrug</li>
+		</tradeTags>
+		<ingestible>
+			<foodType>Plant, Processed</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.80</joy>
+			<baseIngestTicks>210</baseIngestTicks>
+			<nurseable>true</nurseable>
+			<drugCategory>Medical</drugCategory>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Take {0}</ingestCommandString>
+			<ingestReportString>Taking {0}.</ingestReportString>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AnimaJadePillBoost</hediffDef>
+					<severity>0.5</severity>
+					<toleranceChemical>EF_Anima</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>EF_AnimaTolerance</hediffDef>
+					<severity>0.03</severity>
+					<toleranceChemical>EF_Anima</toleranceChemical>
+					<divideByBodySize>true</divideByBodySize>
+					<multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetNeed">
+					<need>Rest</need>
+					<offset>0.125</offset>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetPsyfocus">
+					<offset>0.25</offset>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		
+		<recipeMaker>
+			<researchPrerequisite>AnimaAlchemy</researchPrerequisite>
+			<recipeUsers>
+				<li>Campfire</li>
+				<li>ElectricStove</li>
+				<li>FueledStove</li>
+				<li>DrugLab</li>
+			</recipeUsers>
+			<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+			<skillRequirements>
+				<Cooking>6</Cooking>
+			</skillRequirements>
+		</recipeMaker>
+		
+		<costList>
+			<AnimaFiberExtract>1</AnimaFiberExtract>
+			<PsychoidLeaves>2</PsychoidLeaves>
+			<Jade>2</Jade>
+		</costList>
+		
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>EF_Anima</chemical>
+				<addictiveness>0.01</addictiveness>
+				<minToleranceToAddict>0.6</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<listOrder>20</listOrder>
+			</li>
+		</comps>
+		
+	</ThingDef>
+
+	<HediffDef>
+		<defName>AnimaJadePillBoost</defName>
+		<label>psychic boost from anima jade pill</label>
+		<labelNoun>an anima jade pill boost</labelNoun>
+		<description>Active anima extract in the bloodstream. Regenerates Psyfocus among other mild psychic benefits.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1.0</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<!--<MaxEntropy>1.2</MaxEntropy>-->
+					<PsychicSensitivity>1.5</PsychicSensitivity>
+				</statFactors>
+				<statOffsets>
+					<!--<PsychicSensitivity>0.1</PsychicSensitivity>-->
+					<PsychicEntropyRecoveryRate>0.5</PsychicEntropyRecoveryRate>
+					<VPE_PsyfocusCostFactor MayRequire="VanillaExpanded.VPsycastsE">-0.1</VPE_PsyfocusCostFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+  
+    <ThoughtDef>
+		<defName>AnimaJadePillBoost</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>AnimaJadePillBoost</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>consumed anima jade pill</label>
+				<description>I feel so connected with nature and the world and full of energy.</description>
+				<baseMoodEffect>15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+</Defs>

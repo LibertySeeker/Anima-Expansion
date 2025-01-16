@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<HediffDef ParentName="DiseaseBase">
+		<defName>SoulShock</defName>
+		<label>soul shock</label>
+		<labelNoun>a soul shock</labelNoun>
+		<description>A form of psychic coma during which the brain recovers from a psychic overload.</description>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>7500~7500</disappearsAfterTicks>
+		</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+  
+    <HediffDef>
+		<defName>AnimaHigh</defName>
+		<label>stoned on anima fibers</label>
+		<labelNoun>an anima high</labelNoun>
+		<description>The mind of the one who smokes anima fibers becomes incredibly sensitive, very helpful for psycasters.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1.0</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statOffsets>
+					<PsychicSensitivity>0.3</PsychicSensitivity>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+  
+    <ThoughtDef>
+		<defName>AnimaHigh</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>AnimaHigh</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>high on anima</label>
+				<description>My mind feels the slightest fluctuations in the surrounding space.</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+    <HediffDef>
+		<defName>AnimaTeaHigh</defName>
+		<label>high on anima tea</label>
+		<labelNoun>an anima tea high</labelNoun>
+		<description>Active anima tea in the bloodstream. Dissipates neural heat.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1.0</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statOffsets>
+					<PsychicEntropyRecoveryRate>0.2</PsychicEntropyRecoveryRate>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+  
+    <ThoughtDef>
+		<defName>AnimaTeaHigh</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>AnimaTeaHigh</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>anima tea</label>
+				<description>I am so... relaxed...</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+ </Defs>

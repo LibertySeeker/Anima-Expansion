@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Biotech</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+         <xpath>/Defs</xpath>
+         <value>
+            <XenotypeDef>
+               <defName>EF_Elders</defName>
+               <label>elders</label>
+               <description>Over the years, elders developed new psychic mechanisms that help them in their daily life and combat.\n\nElders possess strong psychic abilities.</description>
+               <descriptionShort>Over the years, elders developed new psychic mechanisms that help them in their daily life and combat.\n\nElders possess strong psychic abilities.</descriptionShort>
+               <iconPath>UI/Xenotypes/EldersXenotype</iconPath>
+               <inheritable>true</inheritable>
+               <combatPowerFactor>1.5</combatPowerFactor>
+               <chanceToUseNameMaker>0</chanceToUseNameMaker>
+               <genes>
+                  <li>PsychicBonding</li>
+                  <li>MaxTemp_SmallIncrease</li>
+                  <li>PsychicAbility_Enhanced</li>
+                  <li>Robust</li>
+				  <li>NakedSpeed</li>
+				  <li>Mood_Pessimist</li>
+               </genes>
+            </XenotypeDef>
+         </value>
+      </match>
+   </Operation>
+</Patch>

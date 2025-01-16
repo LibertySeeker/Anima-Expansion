@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>AnimaSilverPill</defName>
+		<label>anima silver pill</label>
+		<description>A round pill refined from concentrated anima fiber extract. This pill contains instant digestible psychic energy which replenishes a portion of depleted psychic focus as well as provides mental relaxation to help dissipate neural heat and hightens psychic sensisitivity. Stabilized and enhanced by coloidal silver. Very useful for psycasters.</description>
+		<descriptionHyperlinks>
+			<HediffDef>AnimaSilverPillBoost</HediffDef>
+			<ThingDef>AnimaFiber</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>AnimaSilverPill</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>800</WorkToMake>
+			<MarketValue>150</MarketValue>
+			<Mass>0.01</Mass>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<tradeTags>
+			<li>AnimaDrug</li>
+		</tradeTags>
+		<ingestible>
+			<foodType>Plant, Processed</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.80</joy>
+			<baseIngestTicks>210</baseIngestTicks>
+			<nurseable>true</nurseable>
+			<drugCategory>Medical</drugCategory>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Take {0}</ingestCommandString>
+			<ingestReportString>Taking {0}.</ingestReportString>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AnimaSilverPillBoost</hediffDef>
+					<severity>0.5</severity>
+					<toleranceChemical>EF_Anima</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>EF_AnimaTolerance</hediffDef>
+					<severity>0.03</severity>
+					<toleranceChemical>EF_Anima</toleranceChemical>
+					<divideByBodySize>true</divideByBodySize>
+					<multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetNeed">
+					<need>Rest</need>
+					<offset>0.125</offset>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetPsyfocus">
+					<offset>0.35</offset>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		
+		<recipeMaker>
+			<researchPrerequisite>AnimaAlchemy</researchPrerequisite>
+			<recipeUsers>
+				<li>Campfire</li>
+				<li>ElectricStove</li>
+				<li>FueledStove</li>
+				<li>DrugLab</li>
+			</recipeUsers>
+			<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+			<skillRequirements>
+				<Cooking>6</Cooking>
+			</skillRequirements>
+		</recipeMaker>
+		
+		<costList>
+			<AnimaFiberExtract>2</AnimaFiberExtract>
+			<PsychoidLeaves>5</PsychoidLeaves>
+			<Silver>20</Silver>
+		</costList>
+		
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>EF_Anima</chemical>
+				<addictiveness>0.01</addictiveness>
+				<minToleranceToAddict>0.6</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<listOrder>20</listOrder>
+			</li>
+		</comps>
+		
+	</ThingDef>
+
+	<HediffDef>
+		<defName>AnimaSilverPillBoost</defName>
+		<label>psychic boost from anima silver pill</label>
+		<labelNoun>an anima silver pill boost</labelNoun>
+		<description>Active anima extract in the bloodstream. Regenerates Psyfocus among other mild psychic benefits.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1.0</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<!--<MaxEntropy>1.2</MaxEntropy>-->
+					<PsychicSensitivity>1.8</PsychicSensitivity>
+				</statFactors>
+				<statOffsets>
+					<!--<PsychicSensitivity>0.1</PsychicSensitivity>-->
+					<PsychicEntropyRecoveryRate>1.0</PsychicEntropyRecoveryRate>
+					<VPE_PsyfocusCostFactor MayRequire="VanillaExpanded.VPsycastsE">-0.15</VPE_PsyfocusCostFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+  
+    <ThoughtDef>
+		<defName>AnimaSilverPillBoost</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>AnimaSilverPillBoost</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>consumed anima silver pill</label>
+				<description>I feel one with nature and the world. I can do anything!</description>
+				<baseMoodEffect>18</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+</Defs>

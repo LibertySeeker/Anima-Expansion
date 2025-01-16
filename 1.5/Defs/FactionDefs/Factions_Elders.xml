@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef>
+    <defName>FactionBase_Elders</defName>
+    <label>Elders</label>
+    <description>Ancient psycaster faction.</description>
+	<pawnsPlural>tribespeople</pawnsPlural>
+	<pawnSingular>tribesman</pawnSingular>
+	<listOrderPriority>999</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+	<maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+	<configurationListOrderPriority>20</configurationListOrderPriority>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>false</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>ancient chief</leaderTitle>
+        <fixedLeaderKinds>
+            <li>Elders_AncientChief</li>
+        </fixedLeaderKinds>
+	<factionIconPath>Icon/Meditate</factionIconPath>
+		<factionNameMaker>NamerFaction_Elders</factionNameMaker>
+		<settlementNameMaker>NamerFactionBase_Elders</settlementNameMaker>
+    <allowedCultures><li>Corunan</li></allowedCultures>
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+    </requiredMemes>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+    </disallowedMemes>
+    <disallowedPrecepts>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_CoveringAnythingButGroinDisapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+    </disallowedPrecepts>
+    <structureMemeWeights>
+      <Structure_Animist MayRequire="Ludeon.RimWorld.Ideology">4</Structure_Animist>
+      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">0</Structure_TheistEmbodied>
+      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">0</Structure_TheistAbstract>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">0</Structure_Archist>
+      <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginChristian>
+      <Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginIslamic>
+      <Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginHindu>
+      <Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginBuddhist>
+    </structureMemeWeights>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.02</Neanderthal>
+        <EF_Elders MayRequire="Ludeon.RimWorld.Biotech">0.08</EF_Elders>
+      </xenotypeChances>
+    </xenotypeSet>
+		<techLevel>Neolithic</techLevel>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Tribal</li>
+				</categories>
+				<commonality>1.0</commonality>
+			</li>
+		</backstoryFilters>
+	<apparelStuffFilter>
+		<thingDefs>
+			<li>Cloth</li>
+			<li>Steel</li>
+		</thingDefs>
+	</apparelStuffFilter>
+    <caravanTraderKinds>
+      <li>Caravan_Elders_BulkGoods</li>
+      <li>Caravan_Elders_WarMerchant</li>
+      <li>Caravan_Elders_ShamanMerchant</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Elders_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Elders_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>
+      <min>-20</min>
+      <max>55</max>
+    </allowedArrivalTemperatureRange>
+	<maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+	  <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <Elders_Warrior>10</Elders_Warrior>
+          <Elders_MightyWarrior>3</Elders_MightyWarrior>
+        </options>
+      </li>
+	  <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <Elders_Warrior>10</Elders_Warrior>
+          <Elders_MightyWarrior>5</Elders_MightyWarrior>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <Elders_Warrior>14</Elders_Warrior>
+          <Elders_MightyWarrior>8</Elders_MightyWarrior>
+          <Elders_Psycaster>3</Elders_Psycaster>
+		  <Elders_AncientChief>1</Elders_AncientChief>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <Elders_Trader>1</Elders_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2.5</Alpaca>
+        </carriers>
+        <guards>
+          <Elders_Warrior>14</Elders_Warrior>
+          <Elders_MightyWarrior>10</Elders_MightyWarrior>
+		  <Elders_Psycaster>3</Elders_Psycaster>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Elders_Warrior>20</Elders_Warrior>
+          <Elders_MightyWarrior>15</Elders_MightyWarrior>
+          <Elders_Psycaster>10</Elders_Psycaster>
+		  <Elders_AncientChief>1</Elders_AncientChief>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Miner>1</Tribal_Miner>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Hunter>1</Tribal_Hunter>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Logger>1</Tribal_Logger>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Farmer>1</Tribal_Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>Icon/Meditate</settlementTexturePath>
+    <raidLootMaker>EF_EldersRaidLootMaker</raidLootMaker>
+  </FactionDef>
+  
+    <ThingSetMakerDef>
+        <defName>EF_EldersRaidLootMaker</defName>
+        <root Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+                <filter>
+                    <thingDefs>
+                        <li>Silver</li>
+                        <li>MedicineHerbal</li>
+                        <li>Jade</li>
+                        <li>Gold</li>
+                        <li>AnimaJoint</li>
+                        <li>Pemmican</li>
+                        <li>AnimaTea</li>
+                    </thingDefs>
+                </filter>
+            </fixedParams>
+        </root>
+    </ThingSetMakerDef>
+
+ </Defs>

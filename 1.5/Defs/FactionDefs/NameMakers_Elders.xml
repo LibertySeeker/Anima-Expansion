@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerFaction_Elders</defName>
+    <rulePack>
+      <rulesStrings>
+		<li>name->Elders</li>
+		<li>name->Grand Elders</li>
+		<li>name->Ancient Elders</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+    
+
+  <RulePackDef>
+    <defName>NamerFactionBase_Elders</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[NamesElders]</li>
+      </rulesStrings>
+	<rulesRaw>
+        <li Class="Rule_File">
+          <keyword>NamesElders</keyword>
+          <path>NameBanks/Names_Elders</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+  
+
+</Defs>

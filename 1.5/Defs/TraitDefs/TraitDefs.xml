@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TraitDef>
+    <defName>NatureHarmony</defName>
+    <commonality>0.5</commonality>
+    <degreeDatas>
+      <li>
+        <label>in harmony with nature</label>
+        <description>{PAWN_nameDef} spent {PAWN_possessive} entire life among trees and wild animals. It definitely changed {PAWN_possessive} behavior. {PAWN_nameDef} won't be upset if {PAWN_pronoun} eats raw food without a table. {PAWN_pronoun} doesn't care about sleeping on the floor, outside or having damaged clothes, although {PAWN_pronoun} prefers to wear at least something.</description>
+		<allowedMeditationFocusTypes><li>Natural</li></allowedMeditationFocusTypes>
+        <disallowedMeditationFocusTypes><li>Artistic</li></disallowedMeditationFocusTypes>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>Greedy</li>
+      <li>Jealous</li>
+      <li>Gourmand</li>
+    </conflictingTraits>
+  </TraitDef>
+  
+</Defs>

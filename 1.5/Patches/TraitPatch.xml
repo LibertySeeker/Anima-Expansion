@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThoughtDef[defName="AteRawFood"]/nullifyingTraits</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThoughtDef[defName="AteRawFood"]</xpath>
+                    <value>
+                        <nullifyingTraits></nullifyingTraits>
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThoughtDef[defName="AteRawFood"]/nullifyingTraits</xpath>
+                <value>
+                    <li>NatureHarmony</li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+	
+	<Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThoughtDef[defName="AteRottenFood"]/nullifyingTraits</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThoughtDef[defName="AteRottenFood"]</xpath>
+                    <value>
+                        <nullifyingTraits></nullifyingTraits>
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThoughtDef[defName="AteRottenFood"]/nullifyingTraits</xpath>
+                <value>
+                    <li>NatureHarmony</li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+	
+	<Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThoughtDef[defName="AteKibble"]/nullifyingTraits</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThoughtDef[defName="AteKibble"]</xpath>
+                    <value>
+                        <nullifyingTraits></nullifyingTraits>
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThoughtDef[defName="AteKibble"]/nullifyingTraits</xpath>
+                <value>
+                    <li>NatureHarmony</li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+	
+	<Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThoughtDef[defName="AteInsectMeatDirect"]/nullifyingTraits</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThoughtDef[defName="AteInsectMeatDirect"]</xpath>
+                    <value>
+                        <nullifyingTraits></nullifyingTraits>
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThoughtDef[defName="AteInsectMeatDirect"]/nullifyingTraits</xpath>
+                <value>
+                    <li>NatureHarmony</li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+	
+	<Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThoughtDef[defName="AteInsectMeatAsIngredient"]/nullifyingTraits</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThoughtDef[defName="AteInsectMeatAsIngredient"]</xpath>
+                    <value>
+                        <nullifyingTraits></nullifyingTraits>
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThoughtDef[defName="AteInsectMeatAsIngredient"]/nullifyingTraits</xpath>
+                <value>
+                    <li>NatureHarmony</li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+	
+	<Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThoughtDef[defName="AteWithoutTable"]/nullifyingTraits</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThoughtDef[defName="AteWithoutTable"]</xpath>
+                    <value>
+                        <nullifyingTraits></nullifyingTraits>
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThoughtDef[defName="AteWithoutTable"]/nullifyingTraits</xpath>
+                <value>
+                    <li>NatureHarmony</li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+	
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThoughtDef[defName="SleptOutside"]/nullifyingTraits</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThoughtDef[defName="SleptOutside"]</xpath>
+                    <value>
+                        <nullifyingTraits></nullifyingTraits>
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThoughtDef[defName="SleptOutside"]/nullifyingTraits</xpath>
+                <value>
+                    <li>NatureHarmony</li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+	
+	<Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThoughtDef[defName="SleptOnGround"]/nullifyingTraits</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThoughtDef[defName="SleptOnGround"]</xpath>
+                    <value>
+                        <nullifyingTraits></nullifyingTraits>
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThoughtDef[defName="SleptOnGround"]/nullifyingTraits</xpath>
+                <value>
+                    <li>NatureHarmony</li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+	
+	<Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThoughtDef[defName="ApparelDamaged"]/nullifyingTraits</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThoughtDef[defName="ApparelDamaged"]</xpath>
+                    <value>
+                        <nullifyingTraits></nullifyingTraits>
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThoughtDef[defName="ApparelDamaged"]/nullifyingTraits</xpath>
+                <value>
+                    <li>NatureHarmony</li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+	
+</Patch>

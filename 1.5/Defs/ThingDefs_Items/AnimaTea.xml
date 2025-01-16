@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>AnimaTea</defName>
+		<label>anima tea</label>
+		<description>A fragrant tea infused with anima fibers.This tea provides mental relaxation to help dissipate neural heat. Very useful for psycasters.</description>
+		<descriptionHyperlinks>
+		  <HediffDef>AnimaTeaHigh</HediffDef>
+		  <ThingDef>AnimaFiber</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Items/AT</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <drawSize>0.88</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+		  <WorkToMake>400</WorkToMake>
+		  <MarketValue>10</MarketValue>
+		  <Mass>0.05</Mass>
+		  <DeteriorationRate>6</DeteriorationRate>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<tradeTags>
+		  <li>AnimaDrug</li>
+		</tradeTags>
+		<ingestible>
+		  <foodType>Fluid, Processed</foodType>
+		  <joyKind>Chemical</joyKind>
+		  <joy>0.40</joy>
+		  <baseIngestTicks>210</baseIngestTicks>
+		  <nurseable>true</nurseable>
+		  <drugCategory>Social</drugCategory>
+		  <ingestSound>Ingest_Drink</ingestSound>
+		  <ingestHoldOffsetStanding>
+			<northDefault>
+			  <offset>(0.18,0,0)</offset>
+			</northDefault>
+		  </ingestHoldOffsetStanding>
+		  <ingestHoldUsesTable>false</ingestHoldUsesTable>
+		  <ingestCommandString>Drink {0}</ingestCommandString>
+		  <ingestReportString>Drinking {0}.</ingestReportString>
+		  <outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+				  <hediffDef>AnimaTeaHigh</hediffDef>
+				  <severity>0.33</severity>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>EF_AnimaTolerance</hediffDef>
+					<severity>0.02</severity>
+					<toleranceChemical>EF_Anima</toleranceChemical>
+					<divideByBodySize>true</divideByBodySize>
+					<multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetNeed">
+					<need>Rest</need>
+					<offset>-0.1</offset>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		
+		<recipeMaker>
+			<researchPrerequisite>AnimaDrugs</researchPrerequisite>
+			<recipeUsers>
+				<li>Campfire</li>
+				<li>ElectricStove</li>
+				<li>FueledStove</li>
+			</recipeUsers>
+			<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+			<workSkill>Cooking</workSkill>
+			<skillRequirements>
+				<Cooking>2</Cooking>
+			</skillRequirements>
+			<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		</recipeMaker>
+		<costList>
+			<AnimaFiber>6</AnimaFiber>
+		</costList>
+		
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>EF_Anima</chemical>
+				<addictiveness>0.01</addictiveness>
+				<minToleranceToAddict>0.6</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<listOrder>20</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

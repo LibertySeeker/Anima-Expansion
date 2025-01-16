@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Vanilla Psycasts Expanded</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs</xpath>
+               <value>
+                  <PawnKindDef ParentName="EF_TribalBase">
+                     <defName>EF_Elders_Caster_Wildspeaker</defName>
+                     <label>wildspeaker</label>
+                     <combatPower>250</combatPower>
+                     <itemQuality>Normal</itemQuality>
+                     <canBeSapper>false</canBeSapper>
+                     <apparelMoney>2000~3000</apparelMoney>
+                     <apparelRequired>
+                        <li>Apparel_AnimaTribal</li>
+                     </apparelRequired>
+                     <requiredWorkTags>
+                        <li>Violent</li>
+                     </requiredWorkTags>
+                     <weaponMoney>9999</weaponMoney>
+                     <weaponTags Inherit="False">
+                        <li>VPE_EltexMelee</li>
+                        <li>AnimaStaff</li>
+                     </weaponTags>
+                     <apparelTags Inherit="False">
+                        <li>AnimaTribal</li>
+                        <li>AnimaVeil</li>
+                        <li>AnimaMask</li>
+                     </apparelTags>
+                     <initialWillRange>5~7</initialWillRange>
+                     <initialResistanceRange>24~40</initialResistanceRange>
+                     <modExtensions>
+                        <li Class="VanillaPsycastsExpanded.PawnKindAbilityExtension_Psycasts">
+                           <implantDef>VPE_PsycastAbilityImplant</implantDef>
+                           <initialLevel>1</initialLevel>
+                           <statUpgradePoints>2~4</statUpgradePoints>
+                           <unlockedPaths>
+                              <VPE_Wildspeaker>1~4|2~7</VPE_Wildspeaker>
+                           </unlockedPaths>
+                        </li>
+                     </modExtensions>
+                  </PawnKindDef>
+                  <PawnKindDef ParentName="EF_TribalBase">
+                     <defName>EF_Elders_Caster_Conflagrator</defName>
+                     <label>conflagator</label>
+                     <combatPower>250</combatPower>
+                     <itemQuality>Normal</itemQuality>
+                     <canBeSapper>false</canBeSapper>
+                     <apparelMoney>2000~3000</apparelMoney>
+                     <apparelRequired>
+                        <li>Apparel_AnimaTribal</li>
+                     </apparelRequired>
+                     <requiredWorkTags>
+                        <li>Violent</li>
+                     </requiredWorkTags>
+                     <weaponMoney>9999</weaponMoney>
+                     <weaponTags Inherit="False">
+                        <li>VPE_EltexMelee</li>
+                        <li>AnimaStaff</li>
+                     </weaponTags>
+                     <apparelTags Inherit="False">
+                        <li>AnimaTribal</li>
+                        <li>AnimaVeil</li>
+                        <li>AnimaMask</li>
+                     </apparelTags>
+                     <initialWillRange>5~7</initialWillRange>
+                     <initialResistanceRange>24~40</initialResistanceRange>
+                     <modExtensions>
+                        <li Class="VanillaPsycastsExpanded.PawnKindAbilityExtension_Psycasts">
+                           <implantDef>VPE_PsycastAbilityImplant</implantDef>
+                           <initialLevel>1</initialLevel>
+                           <statUpgradePoints>2~4</statUpgradePoints>
+                           <unlockedPaths>
+                              <VPE_Conflagrator>1~4|2~7</VPE_Conflagrator>
+                           </unlockedPaths>
+                        </li>
+                     </modExtensions>
+                  </PawnKindDef>
+                  <PawnKindDef ParentName="EF_TribalBase">
+                     <defName>EF_Elders_Caster_Frostshaper</defName>
+                     <label>frostshaper</label>
+                     <combatPower>250</combatPower>
+                     <itemQuality>Normal</itemQuality>
+                     <canBeSapper>false</canBeSapper>
+                     <apparelMoney>2000~3000</apparelMoney>
+                     <apparelRequired>
+                        <li>Apparel_AnimaTribal</li>
+                     </apparelRequired>
+                     <requiredWorkTags>
+                        <li>Violent</li>
+                     </requiredWorkTags>
+                     <weaponMoney>9999</weaponMoney>
+                     <weaponTags Inherit="False">
+                        <li>VPE_EltexMelee</li>
+                        <li>AnimaStaff</li>
+                     </weaponTags>
+                     <apparelTags Inherit="False">
+                        <li>AnimaTribal</li>
+                        <li>AnimaVeil</li>
+                        <li>AnimaMask</li>
+                     </apparelTags>
+                     <initialWillRange>5~7</initialWillRange>
+                     <initialResistanceRange>24~40</initialResistanceRange>
+                     <modExtensions>
+                        <li Class="VanillaPsycastsExpanded.PawnKindAbilityExtension_Psycasts">
+                           <implantDef>VPE_PsycastAbilityImplant</implantDef>
+                           <initialLevel>1</initialLevel>
+                           <statUpgradePoints>2~4</statUpgradePoints>
+                           <unlockedPaths>
+                              <VPE_Frostshaper>1~4|2~7</VPE_Frostshaper>
+                           </unlockedPaths>
+                        </li>
+                     </modExtensions>
+                  </PawnKindDef>
+                  <PawnKindDef ParentName="EF_TribalBase">
+                     <defName>EF_Elders_Caster_Staticlord</defName>
+                     <label>staticlord</label>
+                     <combatPower>250</combatPower>
+                     <itemQuality>Normal</itemQuality>
+                     <canBeSapper>false</canBeSapper>
+                     <apparelMoney>2000~3000</apparelMoney>
+                     <apparelRequired>
+                        <li>Apparel_AnimaTribal</li>
+                     </apparelRequired>
+                     <requiredWorkTags>
+                        <li>Violent</li>
+                     </requiredWorkTags>
+                     <weaponMoney>9999</weaponMoney>
+                     <weaponTags Inherit="False">
+                        <li>VPE_EltexMelee</li>
+                        <li>AnimaStaff</li>
+                     </weaponTags>
+                     <apparelTags Inherit="False">
+                        <li>AnimaTribal</li>
+                        <li>AnimaVeil</li>
+                        <li>AnimaMask</li>
+                     </apparelTags>
+                     <initialWillRange>5~7</initialWillRange>
+                     <initialResistanceRange>24~40</initialResistanceRange>
+                     <modExtensions>
+                        <li Class="VanillaPsycastsExpanded.PawnKindAbilityExtension_Psycasts">
+                           <implantDef>VPE_PsycastAbilityImplant</implantDef>
+                           <initialLevel>1</initialLevel>
+                           <statUpgradePoints>2~4</statUpgradePoints>
+                           <unlockedPaths>
+                              <VPE_Staticlord>1~4|2~7</VPE_Staticlord>
+                           </unlockedPaths>
+                        </li>
+                     </modExtensions>
+                  </PawnKindDef>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/FactionDef[defName="FactionBase_Elders"]/pawnGroupMakers</xpath>
+               <value>
+                  <pawnGroupMakers>
+                     <li>
+                        <kindDef>Peaceful</kindDef>
+                        <options>
+                           <Elders_Warrior>10</Elders_Warrior>
+                           <Elders_MightyWarrior>3</Elders_MightyWarrior>
+                        </options>
+                     </li>
+                     <li Class="VanillaPsycastsExpanded.PawnGroupMaker_PsycasterRaid">
+                        <kindDef>Combat</kindDef>
+                        <commonality>100</commonality>
+                        <options>
+                           <Elders_Warrior>10</Elders_Warrior>
+                           <Elders_MightyWarrior>5</Elders_MightyWarrior>
+                           <Tribal_Caster_Conflagrator>1.5</Tribal_Caster_Conflagrator>
+                           <Tribal_Caster_Frostshaper>1.5</Tribal_Caster_Frostshaper>
+                           <Tribal_Caster_Staticlord>1.0</Tribal_Caster_Staticlord>
+                        </options>
+                     </li>
+                     <li Class="VanillaPsycastsExpanded.PawnGroupMaker_PsycasterRaid">
+                        <kindDef>Combat</kindDef>
+                        <commonality>60</commonality>
+                        <options>
+                           <Elders_Warrior>14</Elders_Warrior>
+                           <Elders_MightyWarrior>8</Elders_MightyWarrior>
+                           <Elders_Psycaster>3</Elders_Psycaster>
+                           <Elders_AncientChief>1</Elders_AncientChief>
+                           <Tribal_Caster_Wildspeaker>4</Tribal_Caster_Wildspeaker>
+                        </options>
+                     </li>
+                     <li>
+                        <kindDef>Combat</kindDef>
+                        <commonality>100</commonality>
+                        <options>
+                           <Elders_Warrior>10</Elders_Warrior>
+                           <Elders_MightyWarrior>5</Elders_MightyWarrior>
+                        </options>
+                     </li>
+                     <li>
+                        <kindDef>Combat</kindDef>
+                        <commonality>60</commonality>
+                        <options>
+                           <Elders_Warrior>14</Elders_Warrior>
+                           <Elders_MightyWarrior>8</Elders_MightyWarrior>
+                           <Elders_Psycaster>3</Elders_Psycaster>
+                           <Elders_AncientChief>1</Elders_AncientChief>
+                        </options>
+                     </li>
+                     <li>
+                        <kindDef>Trader</kindDef>
+                        <traders>
+                           <Elders_Trader>1</Elders_Trader>
+                        </traders>
+                        <carriers>
+                           <Muffalo>6</Muffalo>
+                           <Dromedary>5</Dromedary>
+                           <Alpaca>2.5</Alpaca>
+                        </carriers>
+                        <guards>
+                           <Elders_Warrior>14</Elders_Warrior>
+                           <Elders_MightyWarrior>10</Elders_MightyWarrior>
+                           <Elders_Psycaster>3</Elders_Psycaster>
+                        </guards>
+                     </li>
+                     <li>
+                        <kindDef>Settlement</kindDef>
+                        <options>
+                           <Elders_Warrior>20</Elders_Warrior>
+                           <Elders_MightyWarrior>15</Elders_MightyWarrior>
+                           <Elders_Psycaster>10</Elders_Psycaster>
+                           <Elders_AncientChief>1</Elders_AncientChief>
+                        </options>
+                     </li>
+                     <li MayRequire="Ludeon.RimWorld.Ideology">
+                        <kindDef>Miners</kindDef>
+                        <commonality>1</commonality>
+                        <options>
+                           <Tribal_Miner>1</Tribal_Miner>
+                        </options>
+                     </li>
+                     <li MayRequire="Ludeon.RimWorld.Ideology">
+                        <kindDef>Hunters</kindDef>
+                        <commonality>1</commonality>
+                        <options>
+                           <Tribal_Hunter>1</Tribal_Hunter>
+                        </options>
+                     </li>
+                     <li MayRequire="Ludeon.RimWorld.Ideology">
+                        <kindDef>Loggers</kindDef>
+                        <commonality>1</commonality>
+                        <options>
+                           <Tribal_Logger>1</Tribal_Logger>
+                        </options>
+                     </li>
+                     <li MayRequire="Ludeon.RimWorld.Ideology">
+                        <kindDef>Farmers</kindDef>
+                        <commonality>1</commonality>
+                        <options>
+                           <Tribal_Farmer>1</Tribal_Farmer>
+                        </options>
+                     </li>
+                  </pawnGroupMakers>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+</Patch>
