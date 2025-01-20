@@ -11,7 +11,7 @@
 			<li>BodyPartsBionic</li>
 		</thingCategories>
 		<graphicData>
-			<texPath>Things/Item/BodyPart/AnimaBodypart</texPath>
+			<texPath>Things/BodyPart/AnimaBodypart</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.80</drawSize>
 		</graphicData>
@@ -47,7 +47,7 @@
 			<li>BodyPartsBionic</li>
 		</thingCategories>
 		<graphicData>
-			<texPath>Things/Item/BodyPart/AnimaBodypart</texPath>
+			<texPath>Things/BodyPart/AnimaBodypart</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.80</drawSize>
 		</graphicData>
@@ -82,7 +82,7 @@
 			<Flammability>0.5</Flammability>
 		</statBases>
 		<graphicData>
-			<texPath>Things/Item/BodyPart/UnfinishedAnima</texPath>
+			<texPath>Things/BodyPart/UnfinishedAnima</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<color>(255,255,255)</color>
 		</graphicData>

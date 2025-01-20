@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
+	<ResearchProjectDef>
+		<defName>DomesticationAnimaGrass</defName>
+		<label>Domestication of anima grass</label>
+		<description>Learn how to domesticate and plant anima grass.</description>
+		<baseCost>800</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<tags>
+		  <li>TribalStart</li>
+		</tags>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>AnimaDrugs</defName>
+		<label>Anima drugs</label>
+		<description>Learn how to produce drugs from anima fibers.</description>
+		<baseCost>800</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+	
 	<ResearchProjectDef>
 		<defName>AnimaAlchemy</defName>
 		<label>Anima alchemy</label>
@@ -12,4 +36,18 @@
 			<li>AnimaDrugs</li>
 		</prerequisites>
 	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>AnimaImplants</defName>
+		<label>Anima bodies</label>
+		<description>We can modify our bodies to match that of ents and dryads of ancient stories, becoming one with nature.</description>
+		<baseCost>4000</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<!--<prerequisites>
+			<li>DomesticationAnimaGrass</li>
+		</prerequisites>-->
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>0.70</researchViewY>
+	</ResearchProjectDef>
+	
 </Defs>
