@@ -33,14 +33,14 @@
 			<HediffDef>AnimaLeg</HediffDef>
 		</descriptionHyperlinks>
 		<costList>
-		  <MedicineHerbal>10</MedicineHerbal>
-		  <AnimaFiber>200</AnimaFiber>
-		  <WoodLog>300</WoodLog>
+			<MedicineHerbal>10</MedicineHerbal>
+			<AnimaFiber>200</AnimaFiber>
+			<WoodLog>300</WoodLog>
 		</costList>
 		<statBases>
-		  <Mass>1.5</Mass>
-		  <MarketValue>500</MarketValue>
-		   <WorkToMake>3000</WorkToMake>
+			<Mass>1.5</Mass>
+			<MarketValue>500</MarketValue>
+			<WorkToMake>3000</WorkToMake>
 		</statBases>
 	</ThingDef>
 
@@ -54,25 +54,25 @@
 		</descriptionHyperlinks>
 		<jobString>Installing an anima carrier leg.</jobString>
 		<skillRequirements>
-		  <Medicine>10</Medicine>
+			<Medicine>10</Medicine>
 		</skillRequirements>
 		<ingredients>
-		  <li>
-			<filter>
-			  <thingDefs>
-				<li>AnimaLeg</li>
-			  </thingDefs>
-			</filter>
-			<count>1</count>
-		  </li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>AnimaLeg</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
 		</ingredients>
 		<fixedIngredientFilter>
-		  <thingDefs>
-			<li>AnimaLeg</li>
-		  </thingDefs>
+			<thingDefs>
+				<li>AnimaLeg</li>
+			</thingDefs>
 		</fixedIngredientFilter>
 		<appliedOnFixedBodyParts>
-		  <li>Leg</li>
+			<li>Leg</li>
 		</appliedOnFixedBodyParts>
 		<addsHediff>AnimaLeg</addsHediff>
 	</RecipeDef>
