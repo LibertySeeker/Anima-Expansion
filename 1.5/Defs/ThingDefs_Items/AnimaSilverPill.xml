@@ -10,7 +10,7 @@
 			<ThingDef>AnimaFiber</ThingDef>
 		</descriptionHyperlinks>
 		<graphicData>
-			<texPath>AnimaSilverPill</texPath>
+			<texPath>Things/Drugs/AnimaSilverPill</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<rotatable>false</rotatable>
