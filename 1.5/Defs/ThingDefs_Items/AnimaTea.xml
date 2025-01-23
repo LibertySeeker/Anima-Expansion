@@ -10,7 +10,7 @@
 		  <ThingDef>AnimaFiber</ThingDef>
 		</descriptionHyperlinks>
 		<graphicData>
-		  <texPath>Things/Drugs/AnimaTea</texPath>
+		  <texPath>Things/Drugs</texPath>
 		  <graphicClass>Graphic_StackCount</graphicClass>
 		  <drawSize>0.88</drawSize>
 		</graphicData>

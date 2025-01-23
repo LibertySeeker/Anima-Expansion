@@ -10,7 +10,7 @@
 			<ThingDef>AnimaFiber</ThingDef>
 		</descriptionHyperlinks>
 		<graphicData>
-			<texPath>Things/Drugs//AnimaJoint</texPath>
+			<texPath>Things/Drugs</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<rotatable>false</rotatable>
@@ -101,103 +101,6 @@
 		</comps>
 		
 	</ThingDef>
-  
-	<ChemicalDef>
-		<defName>EF_Anima</defName>
-		<label>Anima</label>
-		<addictionHediff>EF_AnimaAddiction</addictionHediff>
-		<toleranceHediff>EF_AnimaTolerance</toleranceHediff>
-		<!--<generateAddictionGenes>true</generateAddictionGenes>-->
-		<onGeneratedAddictedToleranceChance>0.1</onGeneratedAddictedToleranceChance>
-		<!--<onGeneratedAddictedEvents>
-			<li>
-				<hediff>ChemicalDamageSevere</hediff>
-				<chance>0.15</chance>
-				<partsToAffect>
-					<li>Brain</li>
-				</partsToAffect>
-			</li>
-		</onGeneratedAddictedEvents>-->
-		<geneToleranceBuildupFactorResist>0.5</geneToleranceBuildupFactorResist>
-		<geneToleranceBuildupFactorImmune>0</geneToleranceBuildupFactorImmune>
-		<!--if drugCategory == Hard, add these lines:
-		<geneOverdoseChanceFactorResist>0.5</geneOverdoseChanceFactorResist>
-		<geneOverdoseChanceFactorImmune>0</geneOverdoseChanceFactorImmune>-->
-	</ChemicalDef>
-  
-	<NeedDef ParentName="DrugAddictionNeedBase">
-		<defName>EF_Anima</defName>
-		<needClass>Need_Chemical</needClass>
-		<label>anima</label>
-		<description>Because of an anima dependence, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
-		<listPriority>25</listPriority>
-	</NeedDef>
-  
-	<HediffDef ParentName="DrugToleranceBase">
-		<defName>EF_AnimaTolerance</defName>
-		<label>anima tolerance</label>
-		<description>A built-up tolerance to anima fibers. The more severe this tolerance is, the more anima it takes to get the same effect.</description>
-		<comps>
-			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>-0.06</severityPerDay>
-			</li>
-			<li Class="HediffCompProperties_DrugEffectFactor">
-				<chemical>EF_Anima</chemical>
-			</li>
-		</comps>
-	</HediffDef>
 
-	<HediffDef ParentName="AddictionBase">
-		<defName>EF_AnimaAddiction</defName>
-		<label>anima dependence</label>
-		<description>A chemical addiction to anima fibers. Long-term use of anima drugs has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the substance.
-\nWithout regular doses of anima, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
-		<hediffClass>Hediff_Addiction</hediffClass>
-		<causesNeed>EF_Anima</causesNeed>
-		<comps>
-			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>-0.0333</severityPerDay>
-				<showDaysToRecover>true</showDaysToRecover>
-			</li>
-		</comps>
-		<stages>
-			<li>
-			</li>
-			<li>
-				<label>withdrawal</label>
-				<statOffsets>
-					<PsychicSensitivity>-0.3</PsychicSensitivity>
-					<PsychicEntropyRecoveryRate>-0.2</PsychicEntropyRecoveryRate>
-				</statOffsets>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.20</offset>
-					</li>
-					<li>
-						<capacity>Moving</capacity>
-						<offset>-0.15</offset>
-					</li>
-				</capMods>
-			</li>
-		</stages>
-	</HediffDef>
-
-	<ThoughtDef>
-		<defName>EF_AnimaWithdrawal</defName>
-		<workerClass>ThoughtWorker_Hediff</workerClass>
-		<hediff>EF_AnimaAddiction</hediff>
-		<validWhileDespawned>true</validWhileDespawned>
-		<stages>
-			<li>
-				<visible>false</visible>
-		</li>
-		<li>
-			<label>anima withdrawal</label>
-			<description>I really need some of those fibers. The world is so dull without them.</description>
-			<baseMoodEffect>-10</baseMoodEffect>
-		</li>
-		</stages>
-	</ThoughtDef>
   
  </Defs>
