@@ -27,7 +27,7 @@
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <graphicData>
-      <texPath>Sac</texPath>
+      <texPath>Things/Item/Sac</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <tradeTags>
